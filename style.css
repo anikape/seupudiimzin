@@ -1,0 +1,326 @@
+/* Importação de fonte */
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
+/* Estilos globais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #FFECCF;
+}
+
+body {
+    font-family: "Chewy", serif;
+}
+
+/* Estilos da fonte "Chewy" */
+.chewy-regular {
+    font-family: "Chewy", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #552813;
+}
+
+.logoImg {
+    width: 12rem;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    gap: 2rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    position: relative;
+}
+
+.nav-links a {
+    display: inline-block;
+    text-decoration: none;
+    color: #552813;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a, .logoImg, .about {
+    font-family: "Chewy", serif;
+}
+
+.nav-links a:hover {
+    color: #C67835;
+    transform: scale(1.2);
+}
+
+/* Menu Hambúrguer */
+.hamburger {
+    display: none; /* Inicialmente invisível */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #552813;
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.3s ease;
+}
+
+/* Estilo para as linhas do ícone do hambúrguer */
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 6px auto;
+    background-color: #552813;
+    transition: 0.3s;
+}
+
+/* Adicionando estilos para o ícone do hambúrguer transformando-o em um "X" */
+.hamburger.open .line1 {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0;
+}
+
+.hamburger.open .line2 {
+    opacity: 0;
+}
+
+.hamburger.open .line3 {
+    transform: rotate(-45deg);
+    position: absolute;
+    bottom: 0;
+}
+
+/* Main */
+.about {
+    background-color: #fff8e1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem auto;
+    text-align: center;
+    width: 96%;
+}
+
+.about p {
+    color: #552813;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-family: "Chewy", serif;
+    background-color: #fff8e1;
+}
+
+.aboutTitle {
+    background-color: #fff8e1;
+    color: #552813;
+    font-weight: bolder;
+    font-size: 3.5rem;
+    padding: 2rem 0;
+    font-family: "Chewy", serif;
+}
+
+/* Seção Cardápio */
+.menu {
+    background-color: #fff8e1;
+    padding: 4rem 2rem;
+    text-align: center;
+ 
+}
+
+.menuTitle {
+    font-size: 3rem;
+    font-family: "Chewy", serif;
+    color: #552813;
+    margin-bottom: 3rem;
+}
+
+.menuItems {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.menuItem {
+    background-color: #FFECCF;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.menuImage {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.menuItem h3 {
+    font-family: "Chewy", serif;
+    font-size: 1.8rem;
+    color: #552813;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #C67835;
+}
+
+
+/* Estilo do footer */
+footer {
+    background-color: #333;
+   
+    padding: 2rem;
+    text-align: center;
+
+}
+
+.local{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    gap: 3.5rem;
+}
+
+.local ul {
+    list-style: none;
+    padding: 0;
+}
+
+.local ul li {
+    margin: 1rem 0;
+}
+
+.local a {
+    text-decoration: none;
+    color: #552813;
+    font-family: "Chewy", serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.local a:hover {
+    color: #C67835;
+}
+
+.local i {
+    font-size: 1.8rem;
+}
+
+.rights{
+    color: #552813;
+    
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .logoImg {
+        width: 10rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block; /* Exibe o hambúrguer em telas menores */
+    }
+
+    .logoImg {
+        width: 8rem;
+    }
+
+    /* Ajustes na seção about para telas menores */
+    .about {
+        width: 100%; /* Alterado para 100% */
+    }
+
+    .aboutTitle {
+        font-size: 2.5rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    /* Responsividade cardápio */
+    .menuItems {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .menuTitle {
+        font-size: 2.5rem;
+    }
+
+    .menuItem h3 {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .price {
+        font-size: 1rem;
+    }
+
+    .map iframe {
+        width: 100%;
+        height: auto;
+    }
+}
